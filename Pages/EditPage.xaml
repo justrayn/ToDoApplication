@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoApplication.Pages.EditPage"
+             Title="Edit Task">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Entry x:Name="TitleEntry" />
+        <Editor x:Name="DetailsEntry" HeightRequest="150" />
+
+        <Button Text="Update" Clicked="OnUpdateClicked" BackgroundColor="#9ba1d8" />
+        <Button Text="Complete" Clicked="OnCompleteClicked" BackgroundColor="#99f399" TextColor="#3a633a" />
+        <Button Text="Delete" Clicked="OnDeleteClicked" BackgroundColor="#ffc1cc" TextColor="#b36d7a" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ToDoApplication.ViewModels"
+             x:Class="ToDoApplication.Pages.ToDoPage"
+             Title="My Tasks">
+
+    <ContentPage.BindingContext>
+        <vm:TodoViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*, Auto">
+        <RefreshView Grid.Row="0" 
+                     Command="{Binding RefreshCommand}" 
+                     RefreshColor="#9ba1d8">
+            
+            <ListView ItemsSource="{Binding ToDoTasks}" 
+                      ItemSelected="OnTaskSelected"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="10,5" 
+                                   Padding="15" 
+                                   BorderColor="#E1E3F3" 
+                                   CornerRadius="12" 
+                                   HasShadow="False"
+                                   BackgroundColor="White">
+                                
+                                <Grid ColumnDefinitions="*, 40, 40" ColumnSpacing="5">
+                                    <Label Grid.Column="0" 
+                                           Text="{Binding Title}" 
+                                           VerticalOptions="Center" 
+                                           FontSize="16"
+                                           TextColor="#333333"
+                                           FontAttributes="Bold"
+                                           LineBreakMode="TailTruncation" />
+
+                                    <Label Grid.Column="1" 
+                                           Text="🗑" 
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" 
+                                           FontSize="18" 
+                                           TextColor="#FF6B6B" />
+
+                                    <Label Grid.Column="2" 
+                                           Text="✓" 
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" 
+                                           FontSize="18" 
+                                           TextColor="#51CF66" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RefreshView>
+
+        <Button Grid.Row="0" 
+                Text="+" 
+                FontSize="24"
+                TextColor="White"
+                Margin="0,0,20,20" 
+                Clicked="OnAddTaskClicked"
+                BackgroundColor="#9ba1d8" 
+                CornerRadius="30" 
+                WidthRequest="60" 
+                HeightRequest="60"
+                HorizontalOptions="End" 
+                VerticalOptions="End"
+                ZIndex="1"/>
+    </Grid>
+</ContentPage>
