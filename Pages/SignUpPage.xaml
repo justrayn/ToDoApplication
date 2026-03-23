@@ -6,7 +6,8 @@
     <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
         <Image Source="dotnet_bot.png" HeightRequest="150" HorizontalOptions="Center" />
         
-        <Entry x:Name="UsernameEntry" Placeholder="User name" />
+        <Entry x:Name="FirstNameEntry" Placeholder="First name" />
+        <Entry x:Name="LastNameEntry" Placeholder="Last name" />
         <Entry x:Name="EmailEntry" Placeholder="Email address" Keyboard="Email" />
         <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
         <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" />

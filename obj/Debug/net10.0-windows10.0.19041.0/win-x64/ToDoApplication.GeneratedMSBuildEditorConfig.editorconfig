@@ -14,7 +14,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToDoApplication
-build_property.ProjectDir = C:\Users\martb\RiderProjects\MauiApp2\ToDoApplication\
+build_property.ProjectDir = D:\Projects\mobile dev things\ToDoApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotOptimizerEnabled = true
@@ -28,7 +28,7 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/App.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
@@ -38,7 +38,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/AppShell.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
@@ -48,7 +48,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/MainPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
@@ -58,7 +58,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/AddTaskPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/AddTaskPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.AddTaskPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\AddTaskPage.xaml
@@ -68,7 +68,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/CompletedPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/CompletedPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.CompletedPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\CompletedPage.xaml
@@ -78,7 +78,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/EditCompletedPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/EditCompletedPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.EditCompletedPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\EditCompletedPage.xaml
@@ -88,7 +88,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/EditPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/EditPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.EditPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\EditPage.xaml
@@ -98,7 +98,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/ProfilePage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.ProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
@@ -108,7 +108,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/SignInPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/SignInPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.SignInPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SignInPage.xaml
@@ -118,7 +118,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/SignUpPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/SignUpPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.SignUpPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SignUpPage.xaml
@@ -128,7 +128,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Pages/ToDoPage.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Pages/ToDoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Pages.ToDoPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ToDoPage.xaml
@@ -138,7 +138,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Resources/Styles/Colors.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
@@ -148,7 +148,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[C:/Users/martb/RiderProjects/MauiApp2/ToDoApplication/Resources/Styles/Styles.xaml]
+[D:/Projects/mobile dev things/ToDoApplication/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ToDoApplication.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

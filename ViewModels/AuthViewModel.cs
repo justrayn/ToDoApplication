@@ -1,14 +1,17 @@
 ﻿using ToDoApplication.Models;
 using ToDoApplication.Services;
+using System.Threading.Tasks;
 
 namespace ToDoApplication.ViewModels;
 
 public class AuthViewModel
 {
-    public bool Login(string email, string password)
+    private readonly ApiService _apiService = new ApiService();
+
+    // SIGN IN
+    public async Task<bool> SignIn(string email, string password)
     {
-        var users = StorageService.LoadAllUsers();
-        var user = users.FirstOrDefault(u => u.Email == email && u.Password == password);
+        var user = await _apiService.SignInAsync(email, password);
         
         if (user != null)
         {
@@ -18,14 +21,16 @@ public class AuthViewModel
         return false;
     }
 
-    public bool Register(string username, string email, string password)
+    // SIGN UP (Now perfectly expects 4 arguments)
+    public async Task<bool> SignUp(string firstName, string lastName, string email, string password)
     {
-        var users = StorageService.LoadAllUsers();
-        if (users.Any(u => u.Email == email)) return false; // Email already exists
-
-        var newUser = new User { Username = username, Email = email, Password = password };
-        StorageService.CurrentUser = newUser;
-        StorageService.SaveCurrentState();
-        return true;
+        // Send all 4 required pieces to the ApiService
+        bool success = await _apiService.SignUpAsync(firstName, lastName, email, password);
+        
+        if (success)
+        {
+            return await SignIn(email, password);
+        }
+        return false;
     }
 }
