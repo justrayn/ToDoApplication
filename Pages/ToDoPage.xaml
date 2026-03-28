@@ -10,6 +10,7 @@
     </ContentPage.BindingContext>
 
     <Grid RowDefinitions="*, Auto">
+        
         <RefreshView Grid.Row="0" 
                      Command="{Binding RefreshCommand}" 
                      RefreshColor="#9ba1d8">
@@ -38,19 +39,23 @@
                                            FontAttributes="Bold"
                                            LineBreakMode="TailTruncation" />
 
-                                    <Label Grid.Column="1" 
-                                           Text="🗑" 
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center" 
-                                           FontSize="18" 
-                                           TextColor="#FF6B6B" />
+                                    <Button Grid.Column="1" 
+                                            Text="🗑" 
+                                            BackgroundColor="Transparent"
+                                            TextColor="#FF6B6B"
+                                            FontSize="18"
+                                            Padding="0"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TodoViewModel}}, Path=DeleteTaskCommand}"
+                                            CommandParameter="{Binding .}" />
 
-                                    <Label Grid.Column="2" 
-                                           Text="✓" 
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center" 
-                                           FontSize="18" 
-                                           TextColor="#51CF66" />
+                                    <Button Grid.Column="2" 
+                                            Text="✓" 
+                                            BackgroundColor="Transparent"
+                                            TextColor="#51CF66"
+                                            FontSize="18"
+                                            Padding="0"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TodoViewModel}}, Path=CompleteTaskCommand}"
+                                            CommandParameter="{Binding .}" />
                                 </Grid>
                             </Frame>
                         </ViewCell>

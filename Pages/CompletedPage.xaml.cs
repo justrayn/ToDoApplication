@@ -9,10 +9,15 @@ public partial class CompletedPage : ContentPage
         InitializeComponent();
     }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        if (BindingContext is TodoViewModel vm) vm.RefreshTasks();
+        
+        if (BindingContext is TodoViewModel viewModel)
+        {
+            // Changed to use the new Async method we built!
+            await viewModel.RefreshTasksAsync();
+        }
     }
 
     private async void OnTaskSelected(object sender, SelectedItemChangedEventArgs e)

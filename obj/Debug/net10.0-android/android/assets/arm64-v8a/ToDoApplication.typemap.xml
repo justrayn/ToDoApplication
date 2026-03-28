@@ -1,10 +1,10 @@
-<api type="debug" assembly-name="ToDoApplication" mvid="8ec1d01d47f344bc8404a30dd9a17431">
+<api type="debug" assembly-name="ToDoApplication" mvid="cbbf40f2cbd2479e9effcf069ccc0b44">
   <java-to-managed>
-    <entry java-name="crc641251b24f4b572a44/MainActivity" managed-name="ToDoApplication.MainActivity, ToDoApplication" managed-type-token-id="33554441" />
-    <entry java-name="crc641251b24f4b572a44/MainApplication" managed-name="ToDoApplication.MainApplication, ToDoApplication" managed-type-token-id="33554442" />
+    <entry java-name="crc641251b24f4b572a44/MainActivity" managed-name="ToDoApplication.MainActivity, ToDoApplication" managed-type-token-id="33554444" />
+    <entry java-name="crc641251b24f4b572a44/MainApplication" managed-name="ToDoApplication.MainApplication, ToDoApplication" managed-type-token-id="33554445" />
   </java-to-managed>
   <managed-to-java>
-    <entry java-name="crc641251b24f4b572a44/MainActivity" managed-name="ToDoApplication.MainActivity, ToDoApplication" managed-type-token-id="33554441" />
-    <entry java-name="crc641251b24f4b572a44/MainApplication" managed-name="ToDoApplication.MainApplication, ToDoApplication" managed-type-token-id="33554442" />
+    <entry java-name="crc641251b24f4b572a44/MainActivity" managed-name="ToDoApplication.MainActivity, ToDoApplication" managed-type-token-id="33554444" />
+    <entry java-name="crc641251b24f4b572a44/MainApplication" managed-name="ToDoApplication.MainApplication, ToDoApplication" managed-type-token-id="33554445" />
   </managed-to-java>
 </api>

@@ -7,6 +7,7 @@ namespace ToDoApplication.Pages;
 public partial class EditCompletedPage : ContentPage
 {
     private TodoTask _task;
+    private readonly ApiService _apiService; // Added ApiService
 
     public TodoTask Task
     {
@@ -16,7 +17,6 @@ public partial class EditCompletedPage : ContentPage
             _task = value;
             if (_task != null)
             {
-                // Ensure UI elements are ready before setting text
                 Dispatcher.Dispatch(() => {
                     TitleEntry.Text = _task.Title ?? "";
                     DetailsEntry.Text = _task.Details ?? "";
@@ -25,40 +25,42 @@ public partial class EditCompletedPage : ContentPage
         }
     }
 
-    // REQUIRED: Parameterless constructor for Shell Navigation
     public EditCompletedPage()
     {
         InitializeComponent();
+        _apiService = new ApiService(); // Initialize it
     }
 
     private async void OnUpdateClicked(object sender, EventArgs e)
     {
         if (_task == null) return;
 
-        _task.Title = TitleEntry.Text;
-        _task.Details = DetailsEntry.Text;
-        StorageService.SaveCurrentState();
+        // 1. Update text on the server
+        bool success = await _apiService.EditTaskAsync(_task.Id, TitleEntry.Text, DetailsEntry.Text ?? "");
         
-        await Shell.Current.GoToAsync("..");
+        if (success) await Shell.Current.GoToAsync("..");
+        else await DisplayAlert("Error", "Failed to update task on server.", "OK");
     }
 
     private async void OnIncompleteClicked(object sender, EventArgs e)
     {
         if (_task == null) return;
 
-        _task.IsCompleted = false; // Move back to To Do
-        StorageService.SaveCurrentState();
+        // 1. Tell server to change status back to active
+        bool success = await _apiService.UpdateStatusAsync(_task.Id, "active"); 
         
-        await Shell.Current.GoToAsync("..");
+        if (success) await Shell.Current.GoToAsync("..");
+        else await DisplayAlert("Error", "Failed to reactivate task.", "OK");
     }
 
     private async void OnDeleteClicked(object sender, EventArgs e)
     {
         if (_task == null) return;
 
-        StorageService.CurrentUser.Tasks.Remove(_task);
-        StorageService.SaveCurrentState();
+        // 1. Tell server to delete it permanently
+        bool success = await _apiService.DeleteTaskAsync(_task.Id);
         
-        await Shell.Current.GoToAsync("..");
+        if (success) await Shell.Current.GoToAsync("..");
+        else await DisplayAlert("Error", "Failed to delete task.", "OK");
     }
 }
