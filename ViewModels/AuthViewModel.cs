@@ -8,29 +8,36 @@ public class AuthViewModel
 {
     private readonly ApiService _apiService = new ApiService();
 
-    // SIGN IN
     public async Task<bool> SignIn(string email, string password)
     {
-        var user = await _apiService.SignInAsync(email, password);
-        
-        if (user != null)
+        try
         {
-            StorageService.CurrentUser = user;
-            return true;
+            var user = await _apiService.SignInAsync(email, password);
+            if (user != null)
+            {
+                StorageService.CurrentUser = user;
+                return true;
+            }
+            return false;
         }
-        return false;
+        catch (Exception ex)
+        {
+            Console.WriteLine($"SignIn Error: {ex.Message}");
+            return false;
+        }
     }
 
-    // SIGN UP (Now perfectly expects 4 arguments)
     public async Task<bool> SignUp(string firstName, string lastName, string email, string password)
     {
-        // Send all 4 required pieces to the ApiService
-        bool success = await _apiService.SignUpAsync(firstName, lastName, email, password);
-        
-        if (success)
+        try
         {
-            return await SignIn(email, password);
+            bool registered = await _apiService.SignUpAsync(firstName, lastName, email, password);
+            return registered;
         }
-        return false;
+        catch (Exception ex)
+        {
+            Console.WriteLine($"SignUp Error: {ex.Message}");
+            return false;
+        }
     }
 }

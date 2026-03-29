@@ -5,9 +5,6 @@
              x:Class="ToDoApplication.Pages.ToDoPage"
              Title="My Tasks">
 
-    <ContentPage.BindingContext>
-        <vm:TodoViewModel x:Name="ViewModel" />
-    </ContentPage.BindingContext>
 
     <Grid RowDefinitions="*, Auto">
         

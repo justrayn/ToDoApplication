@@ -1,14 +1,17 @@
-﻿namespace ToDoApplication;
+﻿using ToDoApplication.Services;
+using ToDoApplication.ViewModels;
+using ToDoApplication.Pages; // ← ADD THIS LINE
+
+namespace ToDoApplication;
 
 public partial class App : Application
 {
+    public static TodoViewModel SharedViewModel { get; } = new TodoViewModel();
+
     public App()
     {
         InitializeComponent();
-
-        // Start directly with the SignInPage. 
-        // No NavigationPage wrapper needed.
-        // MainPage = new Pages.SignInPage();
-        MainPage = new NavigationPage(new Pages.SignInPage());
+        StorageService.CurrentUser = null;
+        MainPage = new NavigationPage(new SignInPage()); 
     }
 }

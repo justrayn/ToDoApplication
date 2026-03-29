@@ -40,6 +40,13 @@ public partial class AddTaskPage : ContentPage
 
         if (isSuccess)
         {
+            
+            App.SharedViewModel.ToDoTasks.Add(new TodoTask
+            {
+                Title = title,
+                Details = details,
+                Status = "active"
+            });
             await MainThread.InvokeOnMainThreadAsync(async () => await Shell.Current.GoToAsync(".."));
         }
         else

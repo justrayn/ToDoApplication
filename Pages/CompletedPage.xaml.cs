@@ -7,17 +7,18 @@ public partial class CompletedPage : ContentPage
     public CompletedPage()
     {
         InitializeComponent();
+
+        // FIX: Same shared ViewModel as ToDoPage — so when a task is marked complete
+        // on the To Do tab, it instantly appears here without a full reload.
+        BindingContext = App.SharedViewModel;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        
-        if (BindingContext is TodoViewModel viewModel)
-        {
-            // Changed to use the new Async method we built!
-            await viewModel.RefreshTasksAsync();
-        }
+
+        // Refresh when this tab is opened so the list is always current.
+        await App.SharedViewModel.RefreshTasksAsync();
     }
 
     private async void OnTaskSelected(object sender, SelectedItemChangedEventArgs e)
@@ -25,10 +26,8 @@ public partial class CompletedPage : ContentPage
         if (e.SelectedItem is Models.TodoTask selectedTask)
         {
             ((ListView)sender).SelectedItem = null;
-            // Redirect to the special "Edit Completed" page
-            await Shell.Current.GoToAsync($"{nameof(EditCompletedPage)}", 
+            await Shell.Current.GoToAsync($"{nameof(EditCompletedPage)}",
                 new Dictionary<string, object> { ["Task"] = selectedTask });
-
         }
     }
 }
